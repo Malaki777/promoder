@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Enquiry form</title>
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height:100vh;
+            background-image: linear-gradient(#4a65d2, #463905);
+        }
+         div{
+            background-color: white;
+            width:500px;
+            height:680px;
+            margin-top:2%;
+            margin-bottom: 2%;
+            align-items: center;
+            margin-left:30%;
+            padding: 5px;
+            border: 5px;
+            border-color: #4ac6d2;
+            border-style: solid;
+         }
+         h1{
+            margin: 5%;
+            font-size: 50px;
+            color: #051622;
+            font-family: sans-serif;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+         }
+         form{
+            margin:2%;
+            padding: 5px;
+         }
+         #name{
+            color: #46ee89;
+            width:100%;
+            margin-top: 1px ;
+            margin-bottom: 5px;
+            padding-top: 8px;
+            padding-bottom:0;
+            border:2px;
+            border-style: solid;
+            border-color: rgb(134, 131, 131);
+            background: transparent;
+            color:#f76fde;
+
+          }
+          #phone{
+             color: #46ee89;
+             width:100%;
+             margin-top: 1px ;
+             margin-bottom: 5px;
+             padding-top: 8px;
+             padding-bottom:0;
+             border:2px;
+             border-style: solid;
+             border-color: rgb(134, 131, 131);
+           }
+          #dob{
+            color: rgb(134, 131, 131);
+            width:100%;
+            margin-top: 1px ;                                    
+            margin-bottom: 5px;
+            padding-top: 8px;
+            padding-bottom:0;
+            border:2px;
+            border-style: solid;
+            border-color:rgb(134, 131, 131);
+            background: transparent;
+           }
+          
+   
+           #subject{
+          border:2px;
+          border-style: solid;
+          border-color: rgb(134, 131, 131);
+          height: 100px;
+          width:400px;
+         }
+      #submit{
+         width: 75%;
+         margin:5%;
+         padding: 10px 30px;
+         cursor: pointer;
+         display:block;
+         background:  #46ee89;
+         border:0;
+         outline:none;
+         border-radius: 30px;
+         font-size: 20px;
+         font-weight: 400;
+         text-transform: uppercase;
+         color:#051622;
+      }
+       
+     #enq{
+      width:100%;
+      height:30px;
+      color: rgb(134, 131, 131);
+      border:2px;
+      border-style: solid;
+      border-color: rgb(134, 131, 131);
+
+
+   }
+
+</style>
+</head>
+    <body>
+        <div id="main">
+
+        <h1> enquiry</h1>
+           <form>
+            
+                <br>
+                <select id="enq">
+                <option id = "kerala"> select your state
+                </option>
+                <option id= "kerala"> tamilnadu
+                </option>
+                <option id= "kerala"> andhrapradesh
+                </option>
+                <option id = "kerala"> arunachal pradesh
+                </option>
+                <option id= "kerala"> gujarat
+                </option>
+                <option id= "kerala"> goa
+                </option>
+                <option id= "kerala"> haryana
+                </option>
+                <option id = "kerala"> himachal pradesh
+                </option>
+                <option id = "kerala"> jharkhand
+                </option>
+                <option id= "kerala"> kerala
+                </option>
+                <option id = "kerala"> meghalaya
+                </option>
+                <option id = "kerala"> maharastra
+                </option>
+                <option id = "kerala"> madhyapradesh
+                </option>
+                <option id = "kerala"> jammu and kashmir
+                </option>
+                <option id = "kerala"> uttarkhand
+                </option>
+                <option id = "kerala"> uttarpardesh
+                </option>
+                <option id = "kerala"> chattisgarh
+                </option>
+                <option id = "kerala"> punjab
+                </option>
+                <option id = "kerala"> bihar
+                </option>
+                <option id= "kerala"> assam
+                </option>
+                <option id = "kerala"> nagaland
+                </option>
+                <option id = "kerala"> manipur
+                </option>
+                <option    id= "kerala"> rajasthan
+                </option>
+                <option  id= "kerala"> karnataka
+                </option>
+                <option id = "kerala"> orissa
+                </option>
+                <option id = "kerala"> sikkim
+                </option>
+                <option id= "kerala"> tripura
+                </option>
+                <option  id= "kerala"> mizoram
+                </option>
+                <option id = "kerala">west bengal
+                </option>
+               
+               </select>
+            <br>
+            <br>
+            <input type="text" name="firstname" id="name"   placeholder=" Enter your first name"  required> 
+            <br><br>
+            <input type="text" name="lastname" id="name"  placeholder=" Enter your last name" required>
+            <br><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder=" Enter your phone number"  required><br>
+            <br>
+            <input type="email" name="email" id="name" placeholder="Enter your email" required>
+            <br><br>
+            <input type="date" class="date-of-birth" id="Dob"  required >
+            <br><br>
+            <br>
+            <textarea id="subject" name="subject" placeholder="Enquiry notes...." ></textarea>
+            <br>
+            <button id="submit"> submit</button>
+            </form>
+           </div>
+    </body>
+</html>
