@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<center><h1> Calculator</h1> </center>
+    <style type="text/css">
+        .container {
+        max-width:300px ;
+        margin-top: 1cm;
+         align-items: center;  
+         margin-left:470px;
+         background-color:black;
+         border-radius:25px;
+box-shadow:1px 1px 4px 4px black;
+height:530px;
+        }
+       #display{
+        text-align:right;
+        height:90px;
+        line-height:70px;
+padding:16px 8px;
+font-size:25px;
+border:2px solid white;
+background-color: white;
+border-radius:45px;
+
+box-shadow:inset -5px -5px 12px white,
+inset 5px 5px 30px rgba(0,0,0,.16),
+
+       }
+        .row5{
+            margin-bottom:2px;
+           margin-left:15px;
+           padding-left: 0.5cm;
+           margin-top:4px;
+        }
+        
+        
+           
+        .button{
+          background-color:white; 
+       font-size:15px ;
+       padding:0.60cm;
+        transition: 0.2 ease-in-out;
+     border:4px solid white;
+     justify-content: space-between;
+    border-radius:25px;
+   
+        }
+.button:hover{
+background-color:green;
+
+
+}
+#equal{
+    background-color: yellow;
+    font-size:30;}
+		  
+       
+    </style>
+	
+</head>
+
+<body bgcolor="lightblue">
+    
+    <div class="container">
+      
+     <div id="display"></div>
+   
+      
+        <div class="row5">
+            <button class="button">C</button>
+            <button class="button">(</button>
+            <button class="button">)</button>
+            <button id="special" class="button">&larr;</button>
+            </div>
+        <div class="row5">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button id="special" class="button">/</button>
+
+
+        </div>
+        <div class="row5">
+
+
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button  id="special"class="button">*</button>
+
+        </div>
+        <div class="row5">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button id="special" class="button">-</button>
+        </div>
+        <div class="row5">
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button">+</button>
+            <button id="equal" class="button">=</button>
+        </div>
+
+
+    <script>
+let display=document.getElementById('display');
+let row5=Array.from(document.getElementsByClassName('button'));
+
+row5.map(button =>{
+    button.addEventListener('click',(e)=>{
+        switch(e.target.innerText){
+            case 'C':
+        display.innerText='';
+        break;
+case '←':
+        if(display.innerText){
+            display.innerText=display.innerText.slice(0,-1);
+          
+         }
+         break;
+        case '=':
+            display.innerText=eval(display.innerText);
+            break;
+            default:
+                display.innerText += e.target.innerText;
+    }
+});   
+    });       
+    </script>
+    </div>
+</body>
+
+</html>
